@@ -16,7 +16,7 @@ const showAnimals = async() => {
         section.append(h3);
 
         const img = document.createElement("img");
-        img.src = "http://localhost:3000/" + animal.img;
+        img.src = "https://node-animals.onrender.com/" + animal.img;
         section.append(img);
     });
 
@@ -24,7 +24,7 @@ const showAnimals = async() => {
 
 const getAnimals = async() => {
     try {
-        return (await fetch("http://localhost:3000/api/animals")).json();
+        return (await fetch("https://node-animals.onrender.com/api/animals")).json();
     } catch (error) {
         console.log("error retrieving json");
         return "";
